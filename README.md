@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Task Manager Frontend
 
-## Getting Started
+This is the **frontend** application for the Task Manager project built with **Next.js (App Router)** and **Tailwind CSS**.
 
-First, run the development server:
+The app allows users to:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- View tasks fetched from the backend API
+- Add new tasks
+- Toggle task completion status
+- Delete tasks
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js (App Router)
+- React (Functional Components with Hooks)
+- Tailwind CSS for styling
+- Fetch API for client-server communication
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js (v14 or later recommended)
+- Backend API running and accessible (see backend README)
+- `.env.local` file configured with backend URL
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Setup and Run Locally
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone this repository**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    git clone <your-frontend-repo-url>
+    cd task-frontend
+    ```
+
+2. **Install dependencies**
+
+    ```bash
+    npm install
+    ```
+
+3. **Configure environment variables**
+
+    Create a .env.local file in the root folder and add:
+
+    ```bash
+    NEXT_PUBLIC_API_URL=http://localhost:5000
+    ```
+
+    Replace http://localhost:5000 with your backend API URL when deploying.
+
+4. **Run the development server**
+
+    ```bash
+    npm run dev
+    ```
+
+    Open your browser at http://localhost:3000
+ to see the app.
+
+## **Deployment**
+
+For production deployment:
+
+- Update .env.local with your deployed backend API URL.
+
+- Build the app:
+
+    ```bash
+    npm run build
+    ```
+
+- Start production server:
+
+    ```bash
+    npm start
+    ```
+
+Or deploy easily on platforms like Vercel which supports Next.js out of the box.
