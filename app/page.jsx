@@ -10,7 +10,7 @@ export default function Home() {
   const [description, setDescription] = useState('');
   const [filter, setFilter] = useState('all');
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5002';
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://task-backend-gfbf.onrender.com';
 
   useEffect(() => {
     fetchTasks();
